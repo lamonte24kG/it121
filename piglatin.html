@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+<h3>Pig Latin</h3>
+
+<script>
+
+function translatePigLatin(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let result = "";
+    let noInfo = 'Please enter name';
+    //str is the user inputted name
+
+    if (vowels.indexOf(str[0])) {
+        result = str + "way";
+        return result;
+    } else {
+        //find position of first occurrence of vowel
+        let vowelMatch = str.indexOf(str.match(vowels)[0,2]);
+        //(0, vowelMatch) position of first vowel is 0. Take string position of first vowel to the end of the string & add the consonants in position 0 &or 1 of original string value then  add "ay"
+        result = str.substr(vowelMatch) + str.substr(0, vowelMatch) + "ay";
+    }
+return result;
+}
+console.log(translatePigLatin("Peter"))
+</script>
+</body>
+</html>
