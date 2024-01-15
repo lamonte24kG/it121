@@ -12,7 +12,7 @@
 
 
 <h3>Pig Latin</h3>
-
+<!--LaMonte Golden IT 121 week2 assignment Jan 14 2024-->
 <script>
 
 function translatePigLatin(str) {
@@ -21,18 +21,18 @@ function translatePigLatin(str) {
     let noInfo = 'Please enter name';
     //str is the user inputted name
 
-    if (vowels.indexOf(str[0])) {
+    if (vowels.indexOf(str[0])>-1) {
         result = str + "way";
         return result;
     } else {
-        //find position of first occurrence of vowel
-        let vowelMatch = str.indexOf(str.match(vowels)[0,2]);
-        //(0, vowelMatch) position of first vowel is 0. Take string position of first vowel to the end of the string & add the consonants in position 0 &or 1 of original string value then  add "ay"
-        result = str.substr(vowelMatch) + str.substr(0, vowelMatch) + "ay";
+        //we now know the string begins with a consonant
+        // Take string position of first vowel to the end of the string & add the consonants in position 0 &or 1 of original string value then  add "ay"
+        //still need another for correctly taking first two consonants
+        result = str.substr(1) + str.substr(0,1) + "ay";
     }
-return result;
+        return result;
 }
-console.log(translatePigLatin("Peter"))
+console.log(translatePigLatin("peter"))
 </script>
 </body>
 </html>
