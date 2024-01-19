@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IT 121 Week 3 Making the Grade</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<script>
+    let grades = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+
+    let newGrades = grades.split(", ", 10);
+    // returns (10) ['jim|25', 'sue|32', 'mary|34', 'ann|22', 'ted|28', 'frank|15', 'lisa|19', 'mike|30', 'ahn|26', 'vishaya|27'].
+    let names = newGrades.split("|", 10);
+    //console.log(newGrades)
+    //Uncaught TypeError: newGrades.split is not a function. How do i extract the grades from the name if I can't use split?
+   
+</script>
+</body>
+</html>
