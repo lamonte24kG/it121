@@ -11,7 +11,7 @@
 <body>
 
 <script>
-    let grades = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+    var grades = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
 
     let newGrades = grades.split(", ", 10);
     // returns (10) ['jim|25', 'sue|32', 'mary|34', 'ann|22', 'ted|28', 'frank|15', 'lisa|19', 'mike|30', 'ahn|26', 'vishaya|27'].
@@ -23,13 +23,29 @@
     //console.log(names)
     //Uncaught TypeError: Cannot read properties of undefined (reading '|')
 
-    let | = '|';
-    let names = newGrades.split['|'];
-    console.log(names)
+    //let | = '|';
+    //let names = newGrades.split['|'];
+    //console.log(names)
     //Uncaught SyntaxError: Unexpected token '='
-    
-    
-   
+    for (let i = 0; i <newGrades.length; i++){console.log(newGrades[i]);}
+    //jim|25
+    //sue|32
+    //mary|34
+    //ann|22
+    //ted|28
+    //frank|15
+    //lisa|19
+    //mike|30
+    //ahn|26    
+    //vishaya|27
+    let stud1 = 'jim|25';
+    let stud1Info = stud1.split(['|']);
+//stud1Info (2) ['jim', '25'] 0: "jim"1: "25"length: 2[[Prototype]]: Array(0)
+    let stud1Name = stud1Info.slice(0,1);
+   //stud1Name ['jim'] 
+   let stud1Grade = stud1Info.slice(1);
+  //stud1Grade ['25']
+  //I separated the name from the grade, is there a faster more efficient way to do this en masse for all students? if not will do process for each student which seems really long
 </script>
 </body>
 </html>
