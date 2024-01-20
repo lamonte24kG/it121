@@ -41,11 +41,20 @@
     let stud1 = 'jim|25';
     let stud1Info = stud1.split(['|']);
 //stud1Info (2) ['jim', '25'] 0: "jim"1: "25"length: 2[[Prototype]]: Array(0)
-    let stud1Name = stud1Info.slice(0,1);
+    //let stud1Name = stud1Info.slice(0,1);
    //stud1Name ['jim'] 
-   let stud1Grade = stud1Info.slice(1);
+   //let stud1Grade = stud1Info.slice(1);
   //stud1Grade ['25']
   //I separated the name from the grade, is there a faster more efficient way to do this en masse for all students? if not will do process for each student which seems really long
+  //per Brenden You don’t need to use slice() on this assignment. using a built-in array method like ‘forEach’ instead of a custom ‘for’ loop would be a bit more performant.But you don’t need to worry about performance for this assignment. After this command: let stud1Info = stud1.split(['|']);studInfo is an array and elements can be accessed by their index position
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
