@@ -5,10 +5,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>IT 121 Week 3 Making the Grade</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+<h1>Week 3 Making the Grade</h1>
+<div class="table">
+  <table>
+    <tr>
+      <th>Names</th>
+      <th>Grades</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+  </table>
+</div>
 
 <script>
     var grades = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
@@ -39,7 +101,62 @@
     //ahn|26    
     //vishaya|27
     let stud1 = 'jim|25';
+    let stud2 = 'sue|32';
+    let stud3 = 'mary|34';
+    let stud4 = 'ann|22';
+    let stud5 = 'ted|28';
+    let stud6 = 'frank|15';
+    let stud7 = 'lisa|19';
+    let stud8 = 'mike|30';
+    let stud9 = 'ahn|26';
+    let stud10 = 'vishaya|27';
+
+//Now use split to remove the | symbol between name & grade
     let stud1Info = stud1.split(['|']);
+    let stud2Info = stud2.split(['|']);
+    let stud3Info = stud3.split(['|']);
+    let stud4Info = stud4.split(['|']);
+    let stud5Info = stud5.split(['|']);
+    let stud6Info = stud6.split(['|']);
+    let stud7Info = stud7.split(['|']);
+    let stud8Info = stud8.split(['|']);
+    let stud9Info = stud9.split(['|']);
+    let stud10Info = stud10.split(['|']);
+
+  //stud1Name is now assigned 'jim' & stud1Grade is now assigned '25' same for each student
+
+  let stud1Name = stud1Info[0];//returns jim
+  let stud2Name = stud2Info[0];//returns sara
+  let stud3Name = stud3Info[0];//returns mary
+  let stud4Name = stud4Info[0];//ann
+  let stud5Name = stud5Info[0];//ted
+  let stud6Name = stud6Info[0];//frank
+  let stud7Name = stud7Info[0];//lisa
+  let stud8Name = stud8Info[0];//mike
+  let stud9Name = stud9Info[0];//ahn
+  let stud10Name = stud10Info[0];//vishaya
+
+//separate grades as new string using index position of grade which is 1
+  let stud1Grade = stud1Info[1];
+  let stud2Grade = stud2Info[1];
+  let stud3Grade = stud3Info[1];
+  let stud4Grade = stud4Info[1];
+  let stud5Grade = stud5Info[1];
+  let stud6Grade = stud6Info[1];
+  let stud7Grade = stud7Info[1];
+  let stud8Grade = stud8Info[1];
+  let stud9Grade = stud9Info[1];
+  let stud10Grade = stud10Info[1];
+  
+  //create an array for math 
+
+
+
+
+
+
+
+
 //stud1Info (2) ['jim', '25'] 0: "jim"1: "25"length: 2[[Prototype]]: Array(0)
     //let stud1Name = stud1Info.slice(0,1);
    //stud1Name ['jim'] 
@@ -47,6 +164,9 @@
   //stud1Grade ['25']
   //I separated the name from the grade, is there a faster more efficient way to do this en masse for all students? if not will do process for each student which seems really long
   //per Brenden You don’t need to use slice() on this assignment. using a built-in array method like ‘forEach’ instead of a custom ‘for’ loop would be a bit more performant.But you don’t need to worry about performance for this assignment. After this command: let stud1Info = stud1.split(['|']);studInfo is an array and elements can be accessed by their index position
+  //let stud1Name = stud1Info[0]; returns element at index position 0 which is the student name
+  //let stud1Grade = stud1Info[1]; returns elememt at index position 1 which is the student grade
+
 
 
 
