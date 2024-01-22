@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IT 121 Week 3 Making the Grade</title>
+</head>
+<body>
+    <!--empty table-->
+    <table id="demo"></table>
+    
+  <script>
+    var info = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+    /*info 'jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27' */
+    let students = info.split(", ");
+    let length = students.length;
+    /*students (10) ['jim|25', 'sue|32', 'mary|34', 'ann|22', 'ted|28', 'frank|15', 'lisa|19', 'mike|30', 'ahn|26', 'vishaya|27'] */
+    let names = []
+    let grades = []
+
+    //create for loop to create 2 arrays for name & grade
+
+    for(let i=0; i<length; i++){
+      let x = students[i].split("|")// will change jim|25 to ['jim', 25]
+      let name = x[0] //location for jim
+      let grade = x[1] //location for 25
+      //add capilization here
+      names.push(name)
+      grades.push(grade)
+    }
+    /*grades
+    (10) ['25', '32', '34', '22', '28', '15', '19', '30', '26', '27']
+    names
+    (10) ['jim', 'sue', 'mary', 'ann', 'ted', 'frank', 'lisa', 'mike', 'ahn', 'vishaya'] */
+
+    document.write['grades'];
+  
+
+   
+  </script>
+  
+
+  </body>
+  </html>
