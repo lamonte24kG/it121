@@ -10,7 +10,7 @@
 <form id="form1" action="#" onsubmit="return validateForm(this);">
   first name: <input type="text" name="firstname"><br>
   last name: <input type="text" name="lastname"><br>
-  password: <input type="text" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+  password: <input type="text" id="psw" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
 
   <button >Check</button>
 </form>
@@ -23,7 +23,7 @@
 </div>
 
 <script>
-var myInput = document.getElementById("psw");
+var myInput = document.getElementById("psw");//need to create id psw?
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var length = document.getElementById("length");
