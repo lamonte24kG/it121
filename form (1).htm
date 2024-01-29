@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+<h1>Functions & validation</h1>
+
+<form id="form1" action="#" onsubmit="return validateForm(this);">
+  first name: <input type="text" name="firstname"><br>
+  last name: <input type="text" name="lastname"><br>
+  password: <input type="text" id="psw" name="password"><br>
+
+  <button >Check</button>
+</form>
+
+<hr><div id="message"></div>
+
+<script>
+
+// add validatePassword function here
+
+const validatePassword = () =>{
+
+  /* Validate lowercase letters  ? should I change the if to
+  if(psw.toUpperCase=psw) so it checks the password with id of psw? */
+  if(myInput.toUpperCase=myInput){  
+    alert('Lower case letter required in password'); 
+  } 
+  
+  // Validate capital letters
+  if(myInput.toLowerCase=lowerCaseLetters){  
+   alert('Capital letter required in password'); 
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    
+  } else {
+   return false
+  }
+}
+
+/*const passwordValid = (validatePassword)*/
+const validateForm = (myForm) => {
+
+  var firstname = myForm.firstname.value; // get text of firstname field
+  var lastname = myForm.lastname.value; // get text of lastname field
+  var password = myForm.password.value; // get text of password field
+
+  // update 'message' DIV with appropriate wording
+  $("#message").html("Button clicked");
+
+  /* Form validation code goes here*/
+  if(firstname&&lastname&&password == ""){
+    alert('Please enter firstname, lastname & password');
+  }
+
+  return false; // prevent page reload
+}
+
+</script>
+
+</body>
+</html>
