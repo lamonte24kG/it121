@@ -33,17 +33,13 @@ const validatePassword = (myInput) =>{
   }
  
   // Validate length
-  if(myInput.length() < 8) {
+  if(myInput.length < 8) {
     alert('password must be at least 8 charactors long');
   } 
 
 }
 
-/*const passwordValid = (validatePassword = true){
-    return true
-}else{ return false
-}
-is this a valid way to return true or false for the password*/
+
 const validateForm = (myForm) => {
 
   var firstname = myForm.firstname.value; // get text of firstname field
@@ -63,7 +59,9 @@ const validateForm = (myForm) => {
   if (password == "") {
     alert("Password must be filled out");
     return false;
-  }
+  }else {
+    return true;
+}
 
   if (validatePassword(password) == true){
     alert('thank you for entering correct password');
