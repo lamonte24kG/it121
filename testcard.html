@@ -1,0 +1,12 @@
+<script>
+    var suits = ['clubs', 'diamonds', 'hearts', 'spades'];
+    var value = ['2 of ', '3 of ', '4 of ', '5 of ', '6 of ', '7 of ', '8 of ', '9 of ', '10 of ', 'jack of ', 'queen of ', 'king of ', 'ace of '];
+    var deck =[];//save deck empty array each iteration of loop will push a new card into the deck array
+
+    for(var suitCounter = 0; suitCounter < 4; suitCounter++){
+        for(var valueCounter = 0; valueCounter < 13; valueCounter++){
+            deck.push(value[valueCounter] + suits[suitCounter]);
+        }
+    }
+    console.log(deck);
+</script>
