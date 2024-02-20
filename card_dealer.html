@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+<h1>Robo Dealer</h1>
+
+  <button onclick="dealHand();">Deal Hand</button>
+
+<hr><div id="card_hand"></div>
+
+<script>
+
+  /* define Card object and deck of cards here */
+
+class Card {
+  constructor(suit, value){
+    this.suit = suit;
+    this.value - value;
+  }
+}
+class Deck {
+    constructor() {
+        this.cards = [];    
+    }
+    createDeck() {
+      var suits = ['clubs', 'diamonds', 'hearts', 'spades'];
+      var values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+      var deck = [];
+
+      for (let s = 0; s < 4; s++){
+        for (let v = 0; v < 13; v++){
+          this.cards.push(new Card(suits[s], values[v]))
+        }
+      }
+      return deck;
+  }
+   /* shuffleDeck(){
+      for(var i = 0; i < 52; i++){
+        var tempCard = deck[i];
+        var randomIndex = Math.floor(Math.random() * 52);
+        deck[i] = deck[randomIndex];
+        deck[randomIndex] = tempCard;
+      }
+    }*/
+  }
+//
+  const dealHand = () => {
+     
+    /* code to deal a card hand goes here */
+
+    // update 'card_hand' DIV with appropriate information
+    $("#card_hand").html("Button clicked");
+
+    return false; // prevent page reload
+  }
+
+</script>
+
+</body>
+</html>
