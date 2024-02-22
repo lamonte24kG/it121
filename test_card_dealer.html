@@ -34,10 +34,10 @@ console.log(deck1.deck);
 
 function shuffleDeck(){
       for(var i = 0; i < 52; i++){
-        var tempCard = deck[i];
+        var tempCard = deck1[i];
         var randomIndex = Math.floor(Math.random() * 52);
-        deck[i] = deck[randomIndex];
-        deck[randomIndex] = tempCard;
+        deck1[i] = deck1[randomIndex];
+        deck1[randomIndex] = tempCard;
       }
     }
 
