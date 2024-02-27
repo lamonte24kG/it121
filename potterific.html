@@ -24,10 +24,10 @@
             <tbody></tbody>
         </table>
         <button id="reset">reset</button>
-        <button id="Gryffindor" onclick="showGryf()">Gryffindor</button>
-        <button id="Hufflepuff">Hufflepuff</button>
-        <button id="Slytherin">Slytherin</button>
-        <button id="Ravenclaw">Ravenclaw</button>
+        <button id="Gryff">Gryffindor</button>
+        <button id="Huffl">Hufflepuff</button>
+        <button id="Slyth">Slytherin</button>
+        <button id="Raven">Ravenclaw</button>
     </body>
 
         <script>
@@ -54,9 +54,10 @@
 
         
         $(document).ready(function(){
-            function showGryf(){
+            $("#Gryff").click(function(){
+            //function showGryf(){
             $("tr:contains(Gryffindor)").show();  
-            }
+            });
          showGryf();   
          console.log(showGryf)
   });
