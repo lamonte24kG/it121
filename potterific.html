@@ -54,12 +54,44 @@
 
         
         $(document).ready(function(){
+            //Buttons to show each house
             $("#Gryff").click(function(){
-            //function showGryf(){
-            $("tr:contains(Gryffindor)").show();  
+            $("tr:contains(Hufflepuff)").hide();  
+            $("tr:contains(Slytherin)").hide();
+            $("tr:contains(Ravenclaw)").hide();
+            $("tr:contains(null)").hide();//how do I hide house:"" 
             });
-         showGryf();   
-         console.log(showGryf)
+
+            $("#Huffl").click(function(){
+            $("tr:contains(Gryffindor)").hide();  
+            $("tr:contains(Slytherin)").hide();
+            $("tr:contains(Ravenclaw)").hide();
+            //$("tr:contains( )").hide();
+            });
+
+            $("#Slyth").click(function(){
+            $("tr:contains(Gryffindor)").hide();  
+            $("tr:contains(Hufflepuff)").hide();
+            $("tr:contains(Ravenclaw)").hide();
+            //$("tr:contains( )").hide();
+            });
+
+            $("#Raven").click(function(){
+            $("tr:contains(Gryffindor)").hide();  
+            $("tr:contains(Hufflepuff)").hide();
+            $("tr:contains(Slytherin)").hide();
+            //$("tr:contains( )").hide();
+            });
+
+            $("#reset").click(function(){
+            $("tr:contains(Gryffindor)").show();  
+            $("tr:contains(Hufflepuff)").show();
+            $("tr:contains(Slytherin)").show();
+            $("tr:contains(Ravenclaw)").show();
+            //$("tr:contains( )").hide();
+            });
+         //showGryf();   
+        // console.log(showGryf)
   });
             //function acts as a filter
         function Characters(characters)
