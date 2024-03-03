@@ -55,13 +55,13 @@
         
         $(document).ready(function(){
             $('button').click(function() {
-                $("tr").show();
+                $("tr").hide();
                 var buttonId = $(this).attr('id');
                 console.log(buttonId)
                 });
     
                 $("tr").filter((i, row) => { 
-                   if (buttonId = $("tr:contains(!buttonId)").hide());
+                   if (buttonId = $("tr:contains(buttonId)").show());
                     
         });
            
