@@ -23,11 +23,11 @@
             </tr></thead>
             <tbody></tbody>
         </table>
-        <button id="reset">reset</button>
-        <button id="Gryff">Gryffindor</button>
-        <button id="Huffl">Hufflepuff</button>
-        <button id="Slyth">Slytherin</button>
-        <button id="Raven">Ravenclaw</button>
+        <button class="reset">reset</button>
+        <button class="Gryffindor">Gryffindor</button>
+        <button class="Hufflepuff">Hufflepuff</button>
+        <button class="Slytherin">Slytherin</button>
+        <button class="Ravenclaw">Ravenclaw</button>
     </body>
 
         <script>
@@ -54,44 +54,22 @@
 
         
         $(document).ready(function(){
-            //Buttons to show each house
-            $("#Gryff").click(function(){
-            $("tr:contains(Hufflepuff)").hide();  
-            $("tr:contains(Slytherin)").hide();
-            $("tr:contains(Ravenclaw)").hide();
-            $("tr:contains(null)").hide();//how do I hide house:"" 
-            });
+           $('input[type="button"]').click(function() { (alert); });
 
-            $("#Huffl").click(function(){
-            $("tr:contains(Gryffindor)").hide();  
-            $("tr:contains(Slytherin)").hide();
-            $("tr:contains(Ravenclaw)").hide();
-            //$("tr:contains( )").hide();
-            });
+            $("tr").filter((i, row) => { 
+  // logic for which rows to hide
+  $(this.class).show(this.class);
+  $(!(this.class)).hide(!this.class);
 
-            $("#Slyth").click(function(){
-            $("tr:contains(Gryffindor)").hide();  
-            $("tr:contains(Hufflepuff)").hide();
-            $("tr:contains(Ravenclaw)").hide();
-            //$("tr:contains( )").hide();
-            });
-
-            $("#Raven").click(function(){
-            $("tr:contains(Gryffindor)").hide();  
-            $("tr:contains(Hufflepuff)").hide();
-            $("tr:contains(Slytherin)").hide();
-            //$("tr:contains( )").hide();
-            });
-
-            $("#reset").click(function(){
-            $("tr:contains(Gryffindor)").show();  
-            $("tr:contains(Hufflepuff)").show();
-            $("tr:contains(Slytherin)").show();
-            $("tr:contains(Ravenclaw)").show();
-            //$("tr:contains( )").hide();
-            });
-         //showGryf();   
-        // console.log(showGryf)
+  /*function checkHouse(){
+    var myHouse = document.getElementById('');
+  }*/
+  $("tr:even").css("background-color", "yellow");
+  $("th").css("background-color", "lightgrey");
+  console.log ("i = ", i);
+  console.log("row = ", row) 
+});
+           
   });
             //function acts as a filter
         function Characters(characters)
@@ -129,11 +107,17 @@
             $row.append($('<td></td>').text(characters[i].alignment));//add their alignment
             $tableBody.append( $row );// Add row to new content
 
-            console.log(characters[i].house);
+            //console.log(characters[i].house);
+
+          
         }
         
         $('thead').after($tableBody);// Add tbody after thead
         
+        $("tr:contains(Gryffindor)").addClass("Gryffindor");
+        $("tr:contains(Hufflepuff)").addClass("Hufflepuff");  
+        $("tr:contains(Slytherin)").addClass("Slytherin");
+        $("tr:contains(Ravenclaw)").addClass("Ravenclaw");
         /*
         - add a button for each 'house' value
         - add table row for each character
@@ -145,6 +129,6 @@
         */
 
         //});
-
+        ;
         </script>
 </html>
