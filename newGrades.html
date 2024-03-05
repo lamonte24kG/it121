@@ -7,9 +7,9 @@
   <title>IT 121 Week 3 Making the Grade</title>
 </head>
 <body>
-    <!--empty table-->
-    <table id="demo"></table>
     
+        <h1>student names and grades</h1>
+     
   <script>
     var info = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
     /*info 'jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27' */
@@ -29,17 +29,50 @@
       names.push(name)
       grades.push(grade)
     }
+    for (var i = 0, x = names.length; i < x; i++) {
+        // Capitalize the first letter of each word and concatenate it with the rest of the word
+        names[i] = names[i][0].toUpperCase() + names[i].substr(1);}
     /*grades
     (10) ['25', '32', '34', '22', '28', '15', '19', '30', '26', '27']
     names
     (10) ['jim', 'sue', 'mary', 'ann', 'ted', 'frank', 'lisa', 'mike', 'ahn', 'vishaya'] */
 
-    document.write['grades'];
-  
+    document.write(names[0], '-', grades[0]);
+    document.write("<br>");
+    document.write(names[1], '-', grades[1]);
+    document.write("<br>");
+    document.write(names[2], '-', grades[2]);
+    document.write("<br>");
+    document.write(names[3], '-', grades[3]);
+    document.write("<br>");
+    document.write(names[4], '-', grades[4]);
+    document.write("<br>");
+    document.write(names[5], '-', grades[5]);
+    document.write("<br>");
+    document.write(names[6], '-', grades[6]);
+    document.write("<br>");
+    document.write(names[7], '-', grades[7]);
+    document.write("<br>");
+    document.write(names[8], '-', grades[8]);
+    document.write("<br>");
+    document.write(names[9], '-', grades[9]);
 
+    
+let newLength =  names.length;
+
+document.getElementById("totals").innerHTML = newLength;
    
   </script>
+  <h3>The total number of students</h3>
   
+  <h3 id="totals"></h3>
+
+  <h3>The average student grade</h3>
+  <h3 id="average"></h3>
+  
+  <h3>The total number of students</h3>
+  <h3 id="totals"></p>
+
 
   </body>
   </html>
