@@ -17,7 +17,6 @@
   class Deck {
   constructor() {
     this.deck = [];
-
     const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
     const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'];
 
@@ -27,21 +26,23 @@
       }
     }
   }
-
-}
-const deck1 = new Deck();
-console.log(deck1.deck);
-
-function shuffleDeck(){
+  }
+  const deck = new Deck();
+console.log(deck);
+  /*function shuffleDeck(){
       for(var i = 0; i < 52; i++){
-        var tempCard = deck1[i];
+        var tempCard = deck[i];
         var randomIndex = Math.floor(Math.random() * 52);
-        deck1[i] = deck1[randomIndex];
-        deck1[randomIndex] = tempCard;
+        deck[i] = deck[randomIndex];
+        deck[randomIndex] = tempCard;         
       }
     }
+    console.log(shuffleDeck);*/
+  
 
-    console.log(shuffleDeck);
+
+
+
 
   
 
