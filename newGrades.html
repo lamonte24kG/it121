@@ -37,6 +37,13 @@
     names
     (10) ['jim', 'sue', 'mary', 'ann', 'ted', 'frank', 'lisa', 'mike', 'ahn', 'vishaya'] */
 
+    let newLength =  names.length;
+    let highGrade = Math.max('grades');//Fxi NaN result 
+    let lowestGrade = Math.min('grades');//Fxi NaN result 
+    let gradeCount = grades.length;
+    let avGrade = grades/gradeCount;
+    console.log(parseInt(grades, 10));
+
     document.write(names[0], '-', grades[0]);
     document.write("<br>");
     document.write(names[1], '-', grades[1]);
@@ -57,11 +64,12 @@
     document.write("<br>");
     document.write(names[9], '-', grades[9]);       
     document.write("<br>");
-    let newLength =  names.length;
-    let highGrade = Math.max('grades');
-    document.write('Total number of students is:',newLength);
+    
+    document.write('Total number of students is: ',newLength);
     document.write("<br>");
-    document.write('The highest grade is:',highGrade)
+    document.write('Total average grade is: ',avGrade);
+    document.write("<br>");
+    document.write('The highest grade is: ',highGrade ,' & The lowest grade is:' ,lowestGrade);
     
   </script>
  
