@@ -27,7 +27,8 @@
       let grade = x[1] //location for 25
       //add capilization here
       names.push(name)
-      grades.push(grade)
+      grade = parseInt(grade);//converting to integer
+      grades.push(grade)//adding int to array
     }
     for (var i = 0, x = names.length; i < x; i++) {
         // Capitalize the first letter of each word and concatenate it with the rest of the word
@@ -36,13 +37,19 @@
     (10) ['25', '32', '34', '22', '28', '15', '19', '30', '26', '27']
     names
     (10) ['jim', 'sue', 'mary', 'ann', 'ted', 'frank', 'lisa', 'mike', 'ahn', 'vishaya'] */
+   /* for (var i = 0, x = grades.length; i < x; i++) {
+        // Capitalize the first letter of each word and concatenate it with the rest of the word
+        grades[i] = grades[i][0].parseInt(grades);}*/
 
     let newLength =  names.length;
-    let highGrade = Math.max('grades');//Fxi NaN result 
-    let lowestGrade = Math.min('grades');//Fxi NaN result 
+    let highGrade = Math.max(grades);//Fxi NaN result 
+    let lowestGrade = Math.min(grades);//Fxi NaN result 
     let gradeCount = grades.length;
     let avGrade = grades/gradeCount;
-    console.log(parseInt(grades, 10));
+   
+    console.log(grades);
+    console.log(highGrade);
+    console.log(lowestGrade);
 
     document.write(names[0], '-', grades[0]);
     document.write("<br>");
