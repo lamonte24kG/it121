@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IT 121 Week 3 Making the Grade</title>
+</head>
+<body>
+    
+        <h1>student names and grades</h1>
+     
+  <script>
+    var students = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+    /*info 'jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27' */
+   
+    for(let i in students){
+      let student = students[i].split("|")// will change jim|25 to ['jim', 25]
+      let name = student[0][0] + student[0].substr(1);
+
+      let grade = parseInt(student[1]); 
+
+    document.write(name, '-', grade);
+
+    // determine min grade
+
+    // determine max grade
+
+    // calculate total of grades for average
+    console.log(grade);
+    console.log(student);
+
+  }
+    let newLength =  name.length;
+    let highGrade = Math.max(grade);//Fxi NaN result 
+    let lowestGrade = Math.min(grade);//Fxi NaN result 
+    let gradeCount = grade.length;
+    let avGrade = grade/gradeCount;
+   
+    console.log(grade);
+    console.log(highGrade);
+    console.log(lowestGrade);
+
+    document.write(name[0], '-', grade[0]);
+    document.write("<br>");
+    document.write(names[1], '-', grades[1]);
+    document.write("<br>");
+    document.write(names[2], '-', grades[2]);
+    document.write("<br>");
+    document.write(names[3], '-', grades[3]);
+    document.write("<br>");
+    document.write(names[4], '-', grades[4]);
+    document.write("<br>");
+    document.write(names[5], '-', grades[5]);
+    document.write("<br>");
+    document.write(names[6], '-', grades[6]);
+    document.write("<br>");
+    document.write(names[7], '-', grades[7]);
+    document.write("<br>");
+    document.write(names[8], '-', grades[8]);
+    document.write("<br>");
+    document.write(names[9], '-', grades[9]);       
+    document.write("<br>");
+    
+    document.write('Total number of students is: ',newLength);
+    document.write("<br>");
+    document.write('Total average grade is: ',avGrade);
+    document.write("<br>");
+    document.write('The highest grade is: ',highGrade ,' & The lowest grade is:' ,lowestGrade);
+    
+  </script>
+ 
+
+  
+  
+
+
+  </body>
+  </html>
