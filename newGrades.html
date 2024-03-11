@@ -42,11 +42,15 @@
         grades[i] = grades[i][0].parseInt(grades);}*/
 
     let newLength =  names.length;
-    let highGrade = Math.max(grades);//Fxi NaN result 
-    let lowestGrade = Math.min(grades);//Fxi NaN result 
+    let highGrade = Math.max(...grades);//Fxi NaN result 
+    let lowestGrade = Math.min(...grades);//Fxi NaN result 
     let gradeCount = grades.length;
-    let avGrade = grades/gradeCount;
-   
+
+    let sum =0;
+    for(let i =0; i < grades.length; i++){
+      sum += grades[i];
+    }
+   let avgGrade = sum/gradeCount;
     console.log(grades);
     console.log(highGrade);
     console.log(lowestGrade);
@@ -74,7 +78,7 @@
     
     document.write('Total number of students is: ',newLength);
     document.write("<br>");
-    document.write('Total average grade is: ',avGrade);
+    document.write('Total average grade is: ' ,avgGrade);
     document.write("<br>");
     document.write('The highest grade is: ',highGrade ,' & The lowest grade is:' ,lowestGrade);
     
