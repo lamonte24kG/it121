@@ -37,20 +37,18 @@
     (10) ['25', '32', '34', '22', '28', '15', '19', '30', '26', '27']
     names
     (10) ['jim', 'sue', 'mary', 'ann', 'ted', 'frank', 'lisa', 'mike', 'ahn', 'vishaya'] */
-   /* for (var i = 0, x = grades.length; i < x; i++) {
-        // Capitalize the first letter of each word and concatenate it with the rest of the word
-        grades[i] = grades[i][0].parseInt(grades);}*/
 
     let newLength =  names.length;
-    let highGrade = Math.max(...grades);//Fxi NaN result 
-    let lowestGrade = Math.min(...grades);//Fxi NaN result 
+    let highGrade = Math.max(...grades);
+    let lowestGrade = Math.min(...grades);
     let gradeCount = grades.length;
 
     let sum =0;
     for(let i =0; i < grades.length; i++){
       sum += grades[i];
     }
-   let avgGrade = sum/gradeCount;
+    let avgGrade = sum/gradeCount;
+
     console.log(grades);
     console.log(highGrade);
     console.log(lowestGrade);
@@ -83,11 +81,5 @@
     document.write('The highest grade is: ',highGrade ,' & The lowest grade is:' ,lowestGrade);
     
   </script>
- 
-
-  
-  
-
-
   </body>
   </html>
