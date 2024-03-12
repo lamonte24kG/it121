@@ -1,0 +1,19 @@
+{
+  "name": "golden1",
+  "version": "1.0.0",
+  "description": "it121 nodejs setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamonte24kG/it121.git"
+  },
+  "author": "LaMonte Golden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamonte24kG/it121/issues"
+  },
+  "homepage": "https://github.com/lamonte24kG/it121#readme"
+}
