@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+<h1>Robo Dealer</h1>
+
+  <button onclick="myDeck.dealHand();">Deal Hand</button>
+
+<script>
+
+  /* define Card object and deck of cards here */
+  class Deck {
+  constructor() {
+    this.deck = [];
+    const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
+    const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'];
+
+    for (let suit in suits) {
+      for (let value in values) {
+        this.deck.push(`${values[value]} of ${suits[suit]}`);
+      }
+    }
+  }
+      shuffleDeck(){
+      for(var i = 0; i < 52; i++){
+        var tempCard = this.deck[i];
+        var randomIndex = Math.floor(Math.random() * 52);
+        this.deck[i] = this.deck[randomIndex];
+        this.deck[randomIndex] = tempCard;         
+      }
+    }
+    dealHand (){
+    for(var i = 0; i < 5; i++){
+        var tempCard = this.deck[i];
+        console.log(tempCard);
+        const para = document.createElement("p");
+        para.innerHTML = tempCard;
+// Append to body:
+        document.body.appendChild(para);
+      }
+  }
+  }
+
+const myDeck = new Deck();
+console.log(myDeck);
+myDeck.shuffleDeck();
+console.log(myDeck + 'shuffled deck');
+</script>
+
+</body>
+</html>
